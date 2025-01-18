@@ -13,6 +13,22 @@ Alt-H1
 Alt-H2
 ------
 
+**This will be Bold**
+*This will be italic*
+***This will be both bold and italic***
+
+1. item 1
+2. item 2
+3. item 3
+   1. sub-item 1 of item 3
+   2. sub-item 2 of item 3
+
+* item 1
+* item 2
+* item 3
+   * sub-item 1 of item 3
+   * sub-item 2 of item 3
+
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -34,3 +50,5 @@ Some text to show that the reference links can follow later.
 [arbitrary case-insensitive reference text]: https://www.mozilla.org
 [1]: http://slashdot.org
 [link text itself]: http://www.reddit.com
+
+![Github logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
