@@ -1,54 +1,48 @@
-# H1
-## H2
-### H3
-#### H4
-##### H5
-###### H6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Cat</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
 
-Alternatively, for H1 and H2, an underline-ish style:
+        .cat-image {
+            width: 300px;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
 
-Alt-H1
-======
+        .cat-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <img 
+        src="cat1.png" 
+        alt="A cute cat" 
+        class="cat-image" 
+        onmouseover="this.src='cat2.png';" 
+        onmouseout="this.src='cat1.png';"
+    >
 
-Alt-H2
-------
-
-**This will be Bold**
-*This will be italic*
-***This will be both bold and italic***
-
-1. item 1
-2. item 2
-3. item 3
-   1. sub-item 1 of item 3
-   2. sub-item 2 of item 3
-
-* item 1
-* item 2
-* item 3
-   * sub-item 1 of item 3
-   * sub-item 2 of item 3
-
-[I'm an inline-style link](https://www.google.com)
-
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
-
-[I'm a reference-style link][Arbitrary case-insensitive reference text]
-
-[I'm a relative reference to a repository file](../blob/master/LICENSE)
-
-[You can use numbers for reference-style link definitions][1]
-
-Or leave it empty and use the [link text itself].
-
-URLs and URLs in angle brackets will automatically get turned into links. 
-http://www.example.com or <http://www.example.com> and sometimes 
-example.com (but not on Github, for example).
-
-Some text to show that the reference links can follow later.
-
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
-
-![Github logo](https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png)
+    <script>
+        // Ensure the images are preloaded to avoid flickering
+        const images = ['cat1.png', 'cat2.png'];
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    </script>
+</body>
+</html>
